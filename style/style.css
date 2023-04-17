@@ -92,7 +92,7 @@ img {
     -ms-user-select: none;
 }
 
-a, button {
+.socialbutton {
     /* Add desired style and border properties here */
     color: #333;
     text-decoration: none;
@@ -115,8 +115,14 @@ a, button {
     font-size: 3.5em;
 }
 
-
-
+.refflinks {
+    text-align: center;
+    color: #9d9393;
+    font-size: 1.5em;
+}
+.refflinkslinks {
+    color: #6b6a77;
+}
 
 
 
