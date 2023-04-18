@@ -120,7 +120,6 @@ html.azure {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    max-width: 7.5%;
 }
 
 .socialbutton {
@@ -249,8 +248,8 @@ html.jo {
 }
 
 ul > li {
-    background: var(--mane-accent);
-    border: 10px solid var(--mane-outline);
+    background: var(--jo-mane-accent);
+    border: 10px solid var(--jo-mane-outline);
     border-radius: 90%;
 }
 
@@ -278,4 +277,13 @@ footer p {
     display: flex;
     justify-content: space-evenly;
     font-style: italic;
+}
+
+
+
+
+
+.reffart {
+    width: 50%;
+    height: 50%;
 }
