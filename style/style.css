@@ -1,3 +1,35 @@
+:root {
+    /* Mane */
+    --jo-mane-primary: #83210c;
+    --jo-mane-accent: #881920;
+    --jo-mane-secondary: #9d3915;
+    --jo-mane-outline: #370b0e;
+    /* Body */
+    --jo-body-fill: #9d8c94;
+    --jo-body-highlight: #b4a8ae;
+    --jo-body-outline: #6d5c65;
+    --jo-body-shadow: #85777d;
+    /* Left Eye, purple*/
+    --jo-left-gradient-top: #6f1c84;
+    --jo-left-gradient-bottom: #8666a9;
+    --jo-left-highlight-top: #9477b3;
+    --jo-left-highlight-bottom: #a993c1;
+    /* Right Eye, pink */
+    --jo-right-gradient-top: #b40e6d;
+    --jo-right-gradient-bottom: #eb128d;
+    --jo-right-highlight-top: #f251ad;
+    --jo-right-highlight-bottom: #f479c0;
+
+    /*Azure Star*/
+    /* Body */
+    --azure-background-1: #5C90ACFF;
+    --azure-background-2: #20333DFF;
+    --azure-tooptip: #555;
+    --azure-tooltip-text: #fff;
+    --azure-socials-border: #0779bc;
+    --azure-button-background-1: #497890FF;
+    --azure-button-background-2: #284D61FF;
+}
 .tooltip {
     position: relative;
     display: inline-block;
@@ -6,8 +38,8 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 160px;
-    background-color: #555;
-    color: #fff;
+    background-color: var(--azure-tooptip);
+    color: var(--azure-tooltip-text);
     text-align: center;
     border-radius: 6px;
     padding: 10px;
@@ -35,16 +67,16 @@
     visibility: visible;
     opacity: 1;
 }
-body {
+body.azure {
     width: 50em;
     margin: 0 auto;
     font-family: Tahoma, Verdana, Arial, sans-serif;
-    background: rgb(92,144,172);
-    background: linear-gradient(174deg, rgba(92,144,172,1) 0%, rgba(32,51,61,1) 100%);
+    background: var(--azure-background-1);
+    background: linear-gradient(174deg, var(--azure-background-1) 0%, var(--azure-background-2) 100%);
     background-size: cover;
     height: 100%;
 }
-html {
+html.azure {
     background-repeat:no-repeat;
     min-height: 100%;
     min-width: 1024px;
@@ -53,14 +85,14 @@ html {
 }
 
 .socials {
-    border: 1px solid #0779bc;
+    border: 1px solid var(--azure-socials-border);
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
-    background: rgb(73,120,144);
-    background: linear-gradient(239deg, rgba(73,120,144,1) 0%, rgba(40,77,97,1) 100%);
+    background: var(--azure-button-background-1);
+    background: linear-gradient(239deg, var(--azure-button-background-1) 0%, var(--azure-button-background-2) 100%);
     height: 100px;
 }
 .socials:hover {
@@ -70,13 +102,13 @@ html {
     align-items: center;
     justify-content: center;
     margin: 10px;
-    background: rgb(73, 127, 144);
-    background: linear-gradient(239deg, rgb(73, 127, 144) 0%, rgb(40, 82, 97) 100%);
+    background: var(--azure-button-background-1);
+    background: linear-gradient(239deg, var(--azure-button-background-1) 0%, var(--azure-button-background-2) 100%);
     height: 100px;
     transform: scale(102%);
 }
 
-img {
+.socialicon {
     margin: 20px;
     width: auto;
     height: 85%;
@@ -85,11 +117,10 @@ img {
     pointer-events: none;
     user-select: none;
     user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    max-width: 7.5%;
 }
 
 .socialbutton {
@@ -127,3 +158,124 @@ img {
 
 
 
+
+
+
+body.jo {
+    width: 50em;
+    margin: 0 auto;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    background: linear-gradient(174deg, var(--jo-body-fill) 0%, var(--jo-body-highlight) 100%);
+    background-size: cover;
+    height: 100%;
+}
+html.jo {
+    background-repeat:no-repeat;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+}
+
+.jo_socials {
+    border: 3px solid var(--jo-body-outline);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: linear-gradient(239deg, var(--jo-right-gradient-top) 0%, var(--jo-right-gradient-bottom) 100%);
+}
+
+.jo_socials:hover {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: linear-gradient(239deg, var(--jo-right-highlight-top) 0%, var(--jo-right-highlight-bottom) 100%);
+    height: 120%;
+    transform: scale(110%);
+}
+
+.jo_socials-2 {
+    border: 3px solid var(--jo-body-outline);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: linear-gradient(239deg, var(--jo-left-gradient-top) 0%, var(--jo-left-gradient-bottom) 100%);
+}
+
+.jo_socials-2:hover {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: linear-gradient(239deg, var(--jo-left-highlight-top) 0%, var(--jo-left-highlight-bottom) 100%);
+    height: 120%;
+    transform: scale(110%);
+}
+
+.jo_socials > img, .jo_socials-2 > img {
+    margin: 20px;
+    width: auto;
+    height: 85%;
+    max-width: 85%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    max-width: 7.5%;
+}
+.jo_socials a, .jo_socials-2 a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    text-align: center;
+    font-size: 2.5em;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+ul > li {
+    background: var(--mane-accent);
+    border: 10px solid var(--mane-outline);
+    border-radius: 90%;
+}
+
+ul > li:hover {
+    transform: scale(125%);
+}
+
+.cm-background-image {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    z-index: 1;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--jo-body-shadow);
+    border-top: 5px solid var(--jo-body-outline);
+}
+
+footer p {
+    display: flex;
+    justify-content: space-evenly;
+    font-style: italic;
+}
