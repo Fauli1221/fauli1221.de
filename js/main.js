@@ -27,8 +27,27 @@ function main() {
     btnMatrix.addEventListener("mouseout", resethover)
 }
 
+async function getDiscordName() {
+    try {
+        const response = await fetch('https://ancient-star-cd9b.fauli1221.workers.dev/');
+        const data = await response.json();
+        const usernameAndDiscriminator = data.username + "#" + data.discriminator;
+        return usernameAndDiscriminator;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+async function changeDiscordName() {
+    const discordName = await getDiscordName();
+    const discordElement = document.getElementById('copyDiscord')
+    discordElement.value = discordName
+    discordElement.innerHTML = discordName
+}
+
 window.addEventListener("load", function () {
     main();
+    changeDiscordName()
 });
 
 const socials = document.querySelectorAll('.socials');
@@ -43,3 +62,4 @@ socials.forEach(social => {
         }
     });
 });
+
